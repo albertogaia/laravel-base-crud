@@ -25,10 +25,14 @@
                     </div>
                     <div class="form-group">
                       <label for="type">Type</label>
-                      <input value="{{ $detailComic['type'] }}" type="text" name="type" class="form-control" id="type" placeholder="Enter type">     
+                      <select name="type" id="type" class="form-control">
+                        <option value="">-- Seleziona --</option>
+                        <option value="ComicBook" {{$detailComic['type'] == 'ComicBook' ? 'selected' : NULL}}>Comic Book</option>
+                        <option value="GraphicNovel" {{$detailComic['type'] == 'GraphicNovel' ? 'selected' : NULL}}>Graphic Novel</option>
+                      </select>
                     </div>
                     
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary mt-2">Submit</button>
                   </form>
             </div>
         </div>
