@@ -34,6 +34,9 @@
                         <option value="ComicBook">Comic Book</option>
                         <option value="GraphicNovel">Graphic Novel</option>
                       </select>
+                      @error('type')
+                      <div class="alert alert-danger"> {{ $message }} </div>
+                      @enderror
                     </div>
                     
                     <button type="submit" class="btn btn-primary">Submit</button>

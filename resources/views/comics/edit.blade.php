@@ -30,6 +30,9 @@
                         <option value="ComicBook" {{$detailComic['type'] == 'ComicBook' ? 'selected' : NULL}}>Comic Book</option>
                         <option value="GraphicNovel" {{$detailComic['type'] == 'GraphicNovel' ? 'selected' : NULL}}>Graphic Novel</option>
                       </select>
+                      @error('type')
+                      <div class="alert alert-danger"> {{ $message }} </div>
+                      @enderror
                     </div>
                     
                     <button type="submit" class="btn btn-primary mt-2">Submit</button>

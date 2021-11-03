@@ -39,6 +39,7 @@ class ComicController extends Controller
         $data = $request->all();
         $request->validate([
             'title'=>'required|unique:comics|max:30',
+            'type'=>'required'
         ]);
 
         $new_comic = new Comic();
@@ -102,4 +103,23 @@ class ComicController extends Controller
         return redirect()->route('comics.index');
 
     }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function duplicate($id)
+    {
+        $comic = Comic::findOrFail($id);
+        $newComic = $comic->replicate()->fill([
+            'title'=>$comic['title'] . ' copy'
+        ]);
+
+        $newComic->save();
+        return redirect()->route('comics.edit', $newComic);
+    }
+
+
 }
