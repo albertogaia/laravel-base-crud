@@ -27,7 +27,8 @@
                                     <form action="{{route('comics.destroy', $comic['id'])}}" method="POST">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger" onclick="myConfirm($comic['title'])">Delete</button>
+                                        <button type="submit.preventDefault()" class="btn btn-danger" onclick="confirm('Vuoi cancellare {{$comic['title']}}?')">Delete</button>
+
                                     </form>
                                 </td>
                             </tr>

@@ -19380,8 +19380,6 @@ module.exports = function(module) {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! ./scripts */ "./resources/js/scripts.js");
-
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
@@ -19413,19 +19411,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
-
-/***/ }),
-
-/***/ "./resources/js/scripts.js":
-/*!*********************************!*\
-  !*** ./resources/js/scripts.js ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function myConfirm(title) {
-  return confirm('Vuoi davvero cancellare ' + title + ' ?');
-}
 
 /***/ }),
 
