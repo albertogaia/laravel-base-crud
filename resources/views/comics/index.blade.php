@@ -23,7 +23,7 @@
                                 <td>{{$comic['price']}} €</td>
                                 <td>
                                     <a href="{{route('comics.show', $comic['id'])}}" class="btn btn-info">Details</a>
-                                    <a href="" class="btn btn-warning">Edit</a>
+                                    <a href="{{route('comics.edit', $comic['id'])}}" class="btn btn-warning">Edit</a>
                                     <a href="" class="btn btn-danger">Delete</a>
 
 
